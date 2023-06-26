@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Temperature Convertor</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temperature Converter <i class="fa-solid fa-temperature-high"></i></h1>
+    <div>
+        <!-- <label for="temp">Enter Temperature</label> -->
+        <input type="text" name="temp" id="temp" placeholder="Enter Temperature">
+    </div>
+    <div class="dropdown-box">
+        <label for="id">Convert From</label>
+        <select id="id">
+            <option value="celcius">Celcius</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+    </div>
+    <div class="dropdown-box">
+        <label for="dropdown">Convert To</label>
+        <select name="" id="dropdown">
+            <option ></option>
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+    </div>
+    <button onclick="func()">Submit</button>
+    <div class="result">
+        <h2 class="span"></h2>
+    </div>
+</div>
+    <!-- <script>
+
+        let arr = {
+            celcius: {
+                first: 'F',
+                secound: 'K'
+            },
+            fahreneit: {
+                first: 'C',
+                secound: 'K'
+            },
+            kelvin: {
+                first: 'C',
+                secound: 'F'
+            }
+        }
+        console.log(arr.kelvin);
+        let display = document.querySelector('.span');
+        const fToC = (temperature) => {
+            value = (temperature - 32) * (5 / 9);
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &deg;C`;
+        }
+        const fToK = (temperature) => {
+            value = (temperature - 32) * (5 / 9) + 273.15;
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &#176;K`;
+        }
+        const cToK = (temperature) => {
+            // alert('C to K');
+
+            value = (temperature + 273.15);
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &deg;K`;
+        }
+        const cToF = (temperature) => {
+            // alert('C to F');
+            value = (temperature * 9 / 5) + 32;
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &deg;F`;
+        }
+        const kToC = (temperature) => {
+            value = (temperature - 273.15);
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &deg;C`;
+        }
+        const kToF = (temperature) => {
+            value = (temperature - 273.15) * (9 / 5) + (32);
+            value = value.toFixed(2);
+            display.innerHTML = `Result ${value} &deg;F`;
+        }
+        function func() {
+            let temperature = document.querySelector('#temp').value;
+            temperature = parseInt(temperature);
+            let dropdown = document.querySelector('#dropdown').value;
+            let id = document.querySelector('#id').value;
+
+            if (id === 'kelvin' && dropdown === 'fahrenheit') {
+                // alert("kevin and Fahrenite");
+                kToF(temperature);
+            }
+            else if (id === 'kelvin' && dropdown === 'celcius') {
+                // alert("K and Celcius");
+                kToC(temperature);
+            }
+            if (id === 'celcius' && dropdown === 'fahrenheit') {
+                // alert("C and F");
+                cToF(temperature);
+
+            }
+            else if (id === 'celcius' && dropdown === 'kelvin') {
+                // alert("C and K");
+                cToK(temperature);
+            }
+            if (id === 'fahrenheit' && dropdown === 'celcius') {
+                // alert("F and C");
+                fToC(temperature);
+            }
+            else if (id === 'fahrenheit' && dropdown === 'kelvin') {
+                // alert("F and C");
+                fToK(temperature);
+            }
+
+            if (!temperature) {
+                alert('Please Enter Correct Value');
+                return;
+            }
+            let value = 0;
+            console.log(value);
+
+            // switch(dropdown){
+            //     case 'fahrenheit': console.log('1');
+            //     value = (tempValue * 9/5) + 32;
+            //     console.log(temperature);
+            //     display.textContent = value + 'F';
+            //     break;
+            //     case 'kelvin': console.log('2');
+            //     value = (tempValue + 273.15);
+            //     display.textContent = value + 'K';
+            //     break;
+            //     default: alert("worng")
+            // }
+        }
+    </script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
